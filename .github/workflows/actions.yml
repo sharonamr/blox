@@ -16,8 +16,7 @@ jobs:
     - name: Publishing all packages to npm
       run: |
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-        npm config set scope "@blox"
-        npm config list
+        npm config set @blox:registry http://registry.npmjs.org
         cat /home/runner/work/_temp/.npmrc
         npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
       env:
