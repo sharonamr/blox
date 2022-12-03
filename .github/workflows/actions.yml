@@ -1,0 +1,17 @@
+name: Blox CI
+on:
+  push:
+    branches: [ main ]
+jobs:
+  publish-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+    - run: npm ci
+    - run: npm run build:docs
+    # copy to pages
+    - run: npm run build -w=packages/core
+    - run: npm publish --dry-run -w=packages/core -w=packages/scripts -w=packages/create-blox-app
