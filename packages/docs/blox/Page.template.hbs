@@ -1,0 +1,12 @@
+{{#if propsTablePath}}
+import { DocsCode, PropsTable } from '@blox/core';
+import propsTable from '{{propsTablePath}}';
+{{else}}
+import { DocsCode } from '@blox/core';
+{{/if}}
+
+export const {{name}}Demo = ({ dependencies }) => (
+<div className="blox-markdown">
+  {{{mdContent}}}
+</div>
+);

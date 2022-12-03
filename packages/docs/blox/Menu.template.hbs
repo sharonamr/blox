@@ -1,0 +1,13 @@
+import { NavLink } from "react-router-dom";
+
+export const Menu = ({className}) => (
+<div className={className}>
+  {{#each components}}
+  <div className='blox-menu-btn'>
+    <NavLink to="/{{this}}">
+      {{this}}
+    </NavLink>
+  </div>
+  {{/each}}
+</div>
+);

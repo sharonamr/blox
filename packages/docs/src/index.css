@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Docs styling */
+  .blox-code-editor {
+    @apply rounded-lg mb-4 font-mono;
+  }
+  .blox-code-preview {
+    @apply rounded-lg shadow-md border-gray-100 border p-4 mb-8;
+  }
+  .blox-github-btn {
+    @apply bg-white border-0 p-2 rounded-full hover:bg-gray-200 hover:scale-105 transition-all;
+  }
+  .blox-menu-btn {
+    @apply mt-1;
+  }
+  .blox-menu-btn > a {
+    @apply bg-white text-tertiary w-full font-thin border-0 py-2 px-4 rounded-full hover:bg-gray-100 transition-all block;
+  }
+  .blox-menu-btn > .active {
+    @apply bg-gray-200 font-medium;
+  }
+  .blox-props-table {
+    @apply text-tertiary w-full xl:w-1/2 my-5 font-mono text-sm;
+  }
+  .blox-props-table tr {
+    @apply border-b;
+  }
+  .blox-props-table th {
+    @apply text-tertiary px-4 py-2 w-1/3 text-left;
+  }
+  .blox-props-table td {
+    @apply text-tertiary px-4 py-2;
+  }
+  .blox-props-table .blox-props-table-type {
+    @apply text-secondary-900;
+  }
+  .blox-markdown h1 {
+    @apply text-primary text-4xl py-4;
+  }
+  .blox-markdown h2 {
+    @apply text-xl;
+  }
+  .blox-markdown h2, h4, h4, h5, h6 {
+    @apply text-tertiary font-bold py-2;
+  }
+  .blox-markdown > p > code {
+    @apply bg-gray-200 px-2 py-1 text-gray-600 text-sm font-mono rounded-md;
+  }
+  .blox-markdown > p {
+    @apply font-thin;
+  }
+  /* Component lib styling */
+  .btn {
+    @apply rounded-2xl bg-secondary text-white p-2 px-4 hover:bg-secondary-500 transition-all;
+  }
+  .card {
+    @apply rounded-md shadow-md border-gray-100 border p-4 mb-8;
+  }
+  .card {
+    @apply rounded-md shadow-md border-gray-100 border p-4 mb-8;
+  }
+}

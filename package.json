@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "start": "npm run dev -w docs",
+    "build:docs": "npm run build -w docs",
+    "build:components": "npm run build -w components",
+    "preview": "npm run preview -w docs",
+    "test": "npm run test --workspaces"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "npm" : ">=8.0.0 <9.0.0",
+    "node": ">=18.0.0 <19.0.0"
+  }
+}
