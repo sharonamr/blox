@@ -11,12 +11,15 @@ jobs:
       with:
         node-version: '18'
         registry-url: 'https://registry.npmjs.org'
-        scope: '@blox'
     - run: npm ci
     - run: npm run build:docs
     # copy to pages
     - run: npm run build -w=packages/core
     - name: Publishing all packages to npm
-      run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+      run: |
+        npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+        npm config set scope "@blox"
+        npm config list
+        npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
