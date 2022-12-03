@@ -23,7 +23,8 @@ jobs:
     - run: npm ci
     - name: publishing
       run: |
-        echo "actor: $ACTOR"
+        git config --global user.name "Blox CI"
+        git config --global user.email "a.sharon@gmail.com"
         echo "version: $VERSION"
         npm version $VERSION -w=packages/core -w=packages/scripts -w=packages/create-blox-app 
         git add . && git commit -m "Releasing $VERSION version"
