@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  publish-and-deploy:
+  verify:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -12,10 +12,4 @@ jobs:
         node-version: '18'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run build -w=packages/core -w=packages/create-blox-app
-    - name: Publishing all packages to npm
-      run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - run: npm run build:docs
-    # copy to pages
+    - run: npm run build --workspaces --if-present

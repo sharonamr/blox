@@ -31,3 +31,9 @@ jobs:
           LEVEL: ${{ inputs.logLevel }}
           TAGS: ${{ inputs.tags }}
           ENVIRONMENT: ${{ inputs.environment }}
+    # - name: Publishing all packages to npm
+    #   run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    # - run: npm run build:docs
+    # copy to pages
