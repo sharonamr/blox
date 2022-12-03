@@ -17,6 +17,8 @@ jobs:
     - run: npm run build -w=packages/core
     - name: Publishing all packages to npm
       run: |
+        npm set "registry=https://registry.npmjs.org/"
+        npm set "@blox:registry=https://registry.npmjs.org/"
         npm set "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}"
         npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
       env:
