@@ -26,16 +26,16 @@ jobs:
     - name: publishing
       run: |
         git config --global user.name "Blox CI"
-        git config --global user.email "a.sharon@gmail.com"
+        git config --global user.email "sharonamr@users.noreply.github.com"
         echo "version: $VERSION"
         npm version $VERSION -w=packages/core -w=packages/scripts -w=packages/create-blox-app 
-        git add . && git commit -m "Releasing $VERSION version"
+        git add . && git commit -m "[skip ci] Releasing $VERSION version"
         git push origin main
       env:
         VERSION: ${{ inputs.version }}
         ACTOR: ${{ github.triggering_actor }}
     - run: npm run build -w=packages/core -w=packages/create-blox-app
-    - run: npm publish --dry-run --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+    - run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
 
     # - name: Publishing all packages to npm
     #   run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
