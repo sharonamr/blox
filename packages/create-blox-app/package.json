@@ -10,7 +10,7 @@
     "create-blox-app": "./bin/create-blox-app.js"
   },
   "scripts": {
-    "generate:template": "node ./src/generate-template.js"
+    "build": "node ./src/generate-template.js"
   },
   "license": "MIT",
   "dependencies": {

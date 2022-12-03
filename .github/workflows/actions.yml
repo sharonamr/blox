@@ -12,7 +12,7 @@ jobs:
         node-version: '18'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run build -w=packages/core
+    - run: npm run build -w=packages/core -w=packages/create-blox-app
     - name: Publishing all packages to npm
       run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
       env:
