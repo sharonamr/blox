@@ -23,12 +23,14 @@ jobs:
     - run: npm ci
     - name: publishing
       run: |
+        echo "actor: $ACTOR"
         echo "version: $VERSION"
         npm version $VERSION -w=packages/core -w=packages/scripts -w=packages/create-blox-app 
         git add . && git commit -m "Releasing $VERSION version"
         git push origin main
       env:
         VERSION: ${{ inputs.version }}
+        ACTOR: ${{ github.triggering_actor }}
     - run: npm run build -w=packages/core -w=packages/create-blox-app
     - run: npm publish --dry-run --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
 
