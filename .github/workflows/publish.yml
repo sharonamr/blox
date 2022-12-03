@@ -35,7 +35,10 @@ jobs:
         VERSION: ${{ inputs.version }}
         ACTOR: ${{ github.triggering_actor }}
     - run: npm run build -w=packages/core -w=packages/create-blox-app
-    - run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+    - name: Publishing all packages to npm
+      run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # - name: Publishing all packages to npm
     #   run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
