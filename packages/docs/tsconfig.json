@@ -18,7 +18,7 @@
     "jsx": "react-jsx",
     "paths": {
       "blox-example-components": ["../components/src/index.ts"],
-      "@blox/core": ["../core/src/index.ts"],
+      "@ui-blox/core": ["../core/src/index.ts"],
     }
   },
   "include": ["src", "data/*.tsx"],

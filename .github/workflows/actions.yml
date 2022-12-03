@@ -14,11 +14,7 @@ jobs:
     - run: npm ci
     - run: npm run build -w=packages/core
     - name: Publishing all packages to npm
-      run: |
-        npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-        npm config set @blox:registry https://registry.npmjs.org
-        cat /home/runner/work/_temp/.npmrc
-        npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
+      run: npm publish --access public -w=packages/core -w=packages/scripts -w=packages/create-blox-app
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: npm run build:docs
