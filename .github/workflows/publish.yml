@@ -23,7 +23,7 @@ jobs:
         node-version: '18'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - name: publishing
+    - name: Bumping version
       run: |
         git config --global user.name "Blox CI"
         git config --global user.email "sharonamr@users.noreply.github.com"
