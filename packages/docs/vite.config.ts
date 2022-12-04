@@ -5,6 +5,7 @@ import { mdToReactPlugin } from '@ui-blox/scripts/plugins/md-generate-vite-plugi
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '',
   resolve: {
     alias: {
       'blox-example-components': resolve(__dirname, '../components/src/index.ts'),
