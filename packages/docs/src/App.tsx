@@ -18,9 +18,9 @@ export default () => (
       </div>
       <main role="main" className="flex h-full w-full flex-grow flex-col">
         <header className="flex-shrink-0 bg-primary h-16 flex items-center shadow-md">
-          <button className="blox-github-btn right-2 absolute">
+          <a href="https://github.com/sharonamr/blox" className="blox-github-btn right-2 absolute">
             <img src={githubLogo} alt="Github logo" />
-          </button>
+          </a>
         </header>
         <div className="h-full sm:overflow-auto md:px-32 lg:px-48 px-8">
           <BloxRoutes dependencies={dependencies} />
