@@ -5,7 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
-    '../../node_modules/@ui-blox/core/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/@ui-blox/core/src/components/*.{ts,tsx}',
     '../components/src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
