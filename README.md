@@ -4,7 +4,6 @@
       <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/3920806/205497219-f194c30e-4e6d-4ee6-8687-c7d04408d628.png">
       <img width="143" alt="blox-logo-light" src="https://user-images.githubusercontent.com/3920806/205497048-c7de4f67-a7cd-42e4-aa77-97ceddad0d62.png">
     </picture>
-    
   </a>
 </p>
 <h4 align="center">Component library framework for creating UI building blocks</h4>
@@ -20,6 +19,9 @@ npm i
 npm start
 ```
 **Next**, play around with the `md` and `tsx` files under `packages/docs/data`
+
+## Blox [demo](https://sharonamr.github.io/blox)
+Check out the [live demo](https://sharonamr.github.io/blox)
 
 ## What is it good for?
 Getting started with building your component lib together with an awesome catalog app to display it.
