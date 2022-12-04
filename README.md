@@ -11,18 +11,19 @@
 <br/>
 
 ## Getting Started
+⚠️ Make sure to use node 18.
+You can use [nvm](https://github.com/nvm-sh/nvm) for that: `nvm use 18`
 ```
 npx create-blox-app@latest my-app
 cd my-app
 npm i
 npm start
 ```
-⚠️ Make sure to use node 18.
-You can use [nvm](https://github.com/nvm-sh/nvm) for that: `nvm use 18`
+**Next**, play around with the `md` and `tsx` files under `packages/docs/data`
 
 ## What is it good for?
 Getting started with building your component lib together with an awesome catalog app to display it.
-## Why choose blox?
+## Why choose **blox**?
 It is definitely a matter of taste, but:
 - It is super fast ⚡ - a [vite](https://vitejs.dev/) react app 
 - It uses [esbuild-wasm](https://github.com/evanw/esbuild) to transpile your blox code at runtime, meaning you can let your component lib consumer edit the examples at runtime.
