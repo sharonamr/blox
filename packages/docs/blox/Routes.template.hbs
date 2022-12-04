@@ -1,14 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import { Welcome } from "../Welcome";
+import { Route, Routes, Navigate } from "react-router-dom";
 {{#each components}}
 import { {{this}}Demo } from './{{this}}Demo'
 {{/each}}
 
 export const BloxRoutes = ({dependencies}) => (
   <Routes>
-    <Route exact path="/" element={<Welcome />} />
+    <Route path="/" element={ <Navigate to="/Welcome" /> } />
     {{#each components}}
-    <Route exact path="{{this}}" element={<{{this}}Demo dependencies={dependencies} />} />
+    <Route path="{{this}}" element={<{{this}}Demo dependencies={dependencies} />} />
     {{/each}}
   </Routes>
 );
