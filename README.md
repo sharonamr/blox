@@ -26,8 +26,8 @@ Getting started with building your component lib together with an awesome catalo
 It is definitely a matter of taste, but:
 - It is super fast ⚡ - a [vite](https://vitejs.dev/) react app 
 - It uses [esbuild-wasm](https://github.com/evanw/esbuild) to transpile your blox code at runtime, meaning you can let your component lib consumer edit the examples at runtime.
-- You edit markdown files, so there is no limit to the way you build you components example pages.
-- **EVERYTHING** is customizable, it can easily become a completely different app than the default one (a complete guide on how to do it will be added soon).
+- You edit markdown files, so there is no limit to the way you build your components example pages.
+- **EVERYTHING** is customizable, it can easily become a completely different app than the default one (a complete guide on how to do that will be added soon).
 
 ## Contributing
 Contributions Are more than welcome!
