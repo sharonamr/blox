@@ -3,6 +3,19 @@ import { copyRecursiveSync } from "./utils.js";
 
 const TEMPLATE_DIR = 'template';
 
+const replaceInFile = (file, regex, replaceWith) => {
+  fs.readFile(file, 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    const result = data.replace(regex, replaceWith);
+  
+    fs.writeFile(file, result, 'utf8', function (err) {
+       if (err) return console.log(err);
+    });
+  });
+};
+
 console.log('generating template');
 
 console.log('cleanup');
@@ -19,7 +32,7 @@ fs.mkdirSync(`${TEMPLATE_DIR}/packages`);
 fs.copyFileSync('../../package.json', `./${TEMPLATE_DIR}/package.json`)
 fs.copyFileSync('../../.npmrc', `./${TEMPLATE_DIR}/.npmrc`)
 
-// Copy package.json + manipulate
-// Copy tsconfig.json + manipulate
-// Copy vite.config.js + manipulate
+console.log('Removing core references after copy')
 
+replaceInFile(`./${TEMPLATE_DIR}/packages/docs/tsconfig.json`, /[\r\n]+.*@ui-blox\/core.*/, '');
+replaceInFile(`./${TEMPLATE_DIR}/packages/docs/vite.config.ts`, /[\r\n]+.*@ui-blox\/core.*/, '');

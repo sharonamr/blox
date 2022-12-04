@@ -1,5 +1,5 @@
 # Button
-This page is describing the `Button` component!
+This page is describing the `Button` component
 
 {{props-table}}
 

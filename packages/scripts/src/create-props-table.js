@@ -2,6 +2,9 @@ import docgen from "react-docgen-typescript";
 import fs from "fs";
 
 export const createPropsTable = (name, file, packagePath) => {
+  if (!fs.existsSync(file)) {
+    return;
+  }
   const dirName = `${packagePath}/src/generated-docs`;
   const customParser = docgen.withDefaultConfig();
   const docs = customParser.parse(file);

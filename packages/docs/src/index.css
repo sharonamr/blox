@@ -50,7 +50,13 @@
     @apply bg-gray-200 px-2 py-1 text-gray-600 text-sm font-mono rounded-md;
   }
   .blox-markdown > p {
-    @apply font-thin;
+    @apply font-thin leading-7;
+  }
+  .blox-markdown > p > a {
+    @apply font-medium text-secondary;
+  }
+  .blox-markdown > p > a:hover {
+    @apply  text-secondary-700;
   }
   /* Component lib styling */
   .btn {
