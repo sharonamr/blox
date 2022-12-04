@@ -1,15 +1,36 @@
-# Welcome to BLOX
-## Component library framework for creating UI building blocks
+<p align="center">
+  <a href="[https://github.com/sharonamr/blox](https://github.com/sharonamr/blox)">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/3920806/205497219-f194c30e-4e6d-4ee6-8687-c7d04408d628.png">
+      <img width="143" alt="blox-logo-light" src="https://user-images.githubusercontent.com/3920806/205497048-c7de4f67-a7cd-42e4-aa77-97ceddad0d62.png">
+    </picture>
+    
+  </a>
+</p>
+<h4 align="center">Component library framework for creating UI building blocks</h4>
+<br/>
 
-### Development
-
-⚠️ Make sure to use node 18.
-You can use [nvm](https://github.com/nvm-sh/nvm) for that: 
+## Getting Started
 ```
-nvm use 18
-```
-Then
-```
+npx create-blox-app@latest my-app
+cd my-app
 npm i
 npm start
 ```
+⚠️ Make sure to use node 18.
+You can use [nvm](https://github.com/nvm-sh/nvm) for that: `nvm use 18`
+
+## What is it good for?
+Getting started with building your component lib together with an awesome catalog app to display it.
+## Why choose blox?
+It is definitely a matter of taste, but:
+- It is super fast ⚡ - a [vite](https://vitejs.dev/) react app 
+- It uses [esbuild-wasm](https://github.com/evanw/esbuild) to transpile your blox code at runtime, meaning you can let your component lib consumer edit the examples at runtime.
+- You edit markdown files, so there is no limit to the way you build you components example pages.
+- **EVERYTHING** is customizable, it can easily become a completely different app than the default one (a complete guide on how to do it will be added soon).
+
+## Contributing
+Contributions Are more than welcome!
+
+- 📥 Pull requests and 🌟 Stars are always welcome.
+- Read our [contributing guide](CONTRIBUTING.md) to get started,
