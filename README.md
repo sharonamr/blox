@@ -33,4 +33,4 @@ It is definitely a matter of taste, but:
 Contributions Are more than welcome!
 
 - 📥 Pull requests and 🌟 Stars are always welcome.
-- Read our [contributing guide](CONTRIBUTING.md) to get started,
+- Read our [contributing guide](CONTRIBUTING.md) to get started.
