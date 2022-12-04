@@ -1,7 +1,7 @@
 import { BloxRoutes } from './generated-docs/Routes'
 import { Menu } from './generated-docs/Menu'
 import * as componentLib from 'blox-example-components';
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import bloxLogo from './assets/blox-logo.svg'
 import githubLogo from './assets/github.svg'
 
