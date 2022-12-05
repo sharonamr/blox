@@ -4,6 +4,7 @@
   "type": "module",
   "files": [
     "template",
+    "template/.npmrc",
     "src"
   ],
   "bin": {
