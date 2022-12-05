@@ -8,6 +8,18 @@
 </p>
 <h4 align="center">Component library framework for creating UI building blocks</h4>
 <br/>
+<p align="center">
+  <a href="https://github.com/sharonamr/blox/actions/workflows/publish.yml">
+    <img src="https://github.com/sharonamr/blox/actions/workflows/publish.yml/badge.svg" alt="Publish status" />
+  </a>
+  <a href="https://github.com/sharonamr/blox/actions/workflows/actions.yml">
+    <img src="https://github.com/sharonamr/blox/actions/workflows/actions.yml/badge.svg" alt="Verify status" />
+  </a>
+  <a href="https://github.com/sharonamr/blox/actions/workflows/deploy-demo.yml">
+    <img src="https://github.com/sharonamr/blox/actions/workflows/deploy-demo.yml/badge.svg" alt="Demo status" />
+  </a>
+</p>
+<br/>
 
 ## Getting Started
 ⚠️ Make sure to use node 18.
