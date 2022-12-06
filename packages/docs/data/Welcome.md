@@ -6,4 +6,4 @@ This is obviously a `demo` blox app, but it can be a good starting point for you
 
 Blox let you edit markdown files and integrate pieces of realtime sandboxes into it.
 
-Checkout the [Button component](blox/Button). or use the menu to go through the components pages and see it in action.
+Use the menu to go through the components pages and see it in action.
