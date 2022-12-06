@@ -5,7 +5,7 @@
 @layer components {
   /* Docs styling */
   .blox-code-editor {
-    @apply rounded-lg mb-4 font-mono leading-4;
+    @apply rounded-lg mb-4 font-mono text-sm bg-gray-900 text-gray-300;
   }
   .blox-code-preview {
     @apply rounded-lg shadow-md border-gray-100 border p-4 mb-8;

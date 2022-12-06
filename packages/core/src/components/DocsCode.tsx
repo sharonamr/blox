@@ -1,6 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import { Preview } from "./Preview";
-import CodeEditor from '@uiw/react-textarea-code-editor';
+import Editor from 'react-simple-code-editor';
+import { highlight, languages } from 'prismjs';
 
 export const DocsCode: React.FC<PropsWithChildren<{ code: string, dependencies: object }>> = ({ code: defaultCode, dependencies }) => {
   const [code, setCode] = useState(defaultCode);
@@ -9,12 +10,11 @@ export const DocsCode: React.FC<PropsWithChildren<{ code: string, dependencies: 
   }, [defaultCode]);
   return (
     <>
-      <CodeEditor
+      <Editor
         value={code}
-        language="js"
-        placeholder="Edit you blox"
-        onChange={(e) => setCode(e.target.value)}
-        padding={15}
+        onValueChange={code => setCode(code)}
+        highlight={code => highlight(code, languages.js, 'js')}
+        padding={10}
         className="blox-code-editor"
       />
       <div className="blox-code-preview">

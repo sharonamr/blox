@@ -21,7 +21,7 @@ const ErrorFallback: React.FC<FallbackProps> = ({ error, resetErrorBoundary }) =
   return (
     <div role="alert">
       <ErrorMessage>{error.message}</ErrorMessage>
-      <button onClick={resetErrorBoundary}>Try again</button>
+      <button className='btn' onClick={resetErrorBoundary}>Try again</button>
     </div>
   )
 }
