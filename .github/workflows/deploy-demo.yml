@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: npm run build:docs
+      - run: BLOX_PUBLIC_PATH=blox npm run build:docs
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact

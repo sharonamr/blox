@@ -5,6 +5,9 @@ import { mdToReactPlugin } from '@ui-blox/scripts/plugins/md-generate-vite-plugi
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    'process.env': process.env,
+  },
   base: '',
   resolve: {
     alias: {

@@ -10,7 +10,7 @@ const dependencies = {
 };
 
 export default () => (
-  <Router basename={window.location.href.includes('localhost') ? '' : '/blox'}>
+  <Router basename={process.env.BLOX_PUBLIC_PATH || ''}>
     <div className="flex h-screen w-full flex-grow flex-col sm:flex-row sm:overflow-hidden">
       <div className="flex-shrink flex-grow-0 bg-white p-4 sm:w-full md:w-1/4 lg:w-1/5 shadow-lg">
         <img className="w-36 top-0 m-auto" src={bloxLogo} alt="blox logo" />
