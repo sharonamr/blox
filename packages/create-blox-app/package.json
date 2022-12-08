@@ -1,6 +1,6 @@
 {
   "name": "create-blox-app",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "module",
   "files": [
     "template",
