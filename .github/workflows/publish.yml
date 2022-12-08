@@ -28,9 +28,10 @@ jobs:
         git config --global user.name "Blox CI"
         git config --global user.email "sharonamr@users.noreply.github.com"
         echo "version: $VERSION"
-        npm version $VERSION -w=packages/core -w=packages/scripts -w=packages/create-blox-app 
-        git add . && git commit -m "[skip ci] Releasing $VERSION version"
-        git push origin main
+        NEW_VERSION=$(npm version $VERSION)
+        npm version ${NEW_VERSION:1} -w=packages/core -w=packages/scripts -w=packages/create-blox-app 
+        git add . && git commit --amend --no-edit --no-verify -m "[skip ci] Releasing $NEW_VERSION"
+        git push --follow-tags origin main
       env:
         VERSION: ${{ inputs.version }}
         ACTOR: ${{ github.triggering_actor }}
