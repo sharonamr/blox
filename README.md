@@ -33,7 +33,9 @@ npm start
 **Next**, play around with the `md` and `tsx` files under `packages/docs/data`
 
 ## Blox [demo](https://sharonamr.github.io/blox)
-<img width="540px" alt="image" src="https://user-images.githubusercontent.com/3920806/206418206-09c0868c-8cc7-4bc3-a4fe-893ae6fde039.png">
+<a href="https://sharonamr.github.io/blox">
+  <img width="540px" alt="image" src="https://user-images.githubusercontent.com/3920806/206418206-09c0868c-8cc7-4bc3-a4fe-893ae6fde039.png">
+</a>
 
 Check out the [live demo](https://sharonamr.github.io/blox)
 
