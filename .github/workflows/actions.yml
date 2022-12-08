@@ -1,5 +1,6 @@
-name: Blox CI
+name: Blox Verify
 on:
+  pull_request:
   push:
     branches: [ main ]
 jobs:
