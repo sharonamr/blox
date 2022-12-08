@@ -33,6 +33,8 @@ npm start
 **Next**, play around with the `md` and `tsx` files under `packages/docs/data`
 
 ## Blox [demo](https://sharonamr.github.io/blox)
+<img width="540px" alt="image" src="https://user-images.githubusercontent.com/3920806/206418206-09c0868c-8cc7-4bc3-a4fe-893ae6fde039.png">
+
 Check out the [live demo](https://sharonamr.github.io/blox)
 
 ## What is it good for?
@@ -41,7 +43,9 @@ Getting started with building your component lib together with an awesome catalo
 It is definitely a matter of taste, but:
 - It is super fast ⚡ - a [vite](https://vitejs.dev/) react app 
 - It uses [esbuild-wasm](https://github.com/evanw/esbuild) to transpile your blox code at runtime, meaning you can let your component lib consumer edit the examples at runtime.
-- You edit markdown files, so there is no limit to the way you build your components example pages.
+<img width="540px" src="https://user-images.githubusercontent.com/3920806/206411790-2fa0360a-9d60-4316-b33e-47ddb73ad34d.gif" alt="Live code editing" />
+
+- You edit markdown files, so there is no limit to the way you build your components example pages. Check out [Button.md](https://github.com/sharonamr/blox/blob/main/packages/docs/data/Button.md) example.
 - **EVERYTHING** is customizable, it can easily become a completely different app than the default one (a complete guide on how to do that will be added soon).
 
 ## Contributing
