@@ -19,7 +19,8 @@
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "styled-components": "^5.3.6"
   },
   "dependencies": {
     "esbuild-wasm": "^0.15.14",

@@ -1,12 +1,56 @@
 {{#if propsTablePath}}
 import { DocsCode, PropsTable } from '@ui-blox/core';
+import styled from "styled-components";
 import propsTable from '{{propsTablePath}}';
 {{else}}
 import { DocsCode } from '@ui-blox/core';
+import styled from "styled-components";
 {{/if}}
 
+const StyledContainer = styled.div`
+    h1 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    h2,
+    h4,
+    h4,
+    h5,
+    h6 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-weight: 700;
+    }
+    & > p > code {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        background-color: #e5e7eb;
+        color: #4b5563;
+        font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        border-radius: 0.375rem;
+    }
+    & > p {
+        font-weight: 100;
+        line-height: 1.75rem;
+    }
+    & > p > a {
+        font-weight: 500;
+    }
+`
+
+
 export const {{name}}Demo = ({ dependencies }) => (
-<div className="blox-markdown">
+<StyledContainer>
   {{{mdContent}}}
-</div>
+</StyledContainer>
 );

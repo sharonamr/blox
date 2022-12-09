@@ -6,7 +6,7 @@ import { getFileContent } from "./scripts-utils.js";
 
 const replacePropsTable = (content) => {
   const ret = content.replace(
-    '{{props-table}}', 
+    '{{props-table}}',
     `<PropsTable table={propsTable} />`
     );
   return ret;
@@ -30,11 +30,11 @@ export const mdToReact = (filePath) => {
 
   const templateContent = getFileContent(`${packagePath}/blox/Page.template.hbs`);
   const mdContent = getFileContent(`${packagePath}/data/${fileName}.md`);
-  
+
   const template = Handlebars.compile(templateContent);
   const propsTablePath = mdContent.includes('{{props-table}}') ? `./${fileName}.props-table.json` : null;
   const compiledTemplate = template({ mdContent: marked.parse(mdContent), name: fileName, propsTablePath });
-  
+
   if (!fs.existsSync(dirName)) {
     fs.mkdirSync(dirName, { recursive: true });
   }

@@ -1,17 +1,42 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
+import styled from 'styled-components';
+import { Button } from '../Button';
 
-export const Card: React.FC<PropsWithChildren<{ title: string }>> = ({ children, title }) => {
+const StyledContainer = styled.div`
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: 1.5rem;
+`;
+
+const StyledContent = styled.div`
+  padding-top: 0.5rem;
+`;
+
+const StyledTitle = styled.h2`
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+`;
+
+export const Card: React.FC<PropsWithChildren<{ title: string }>> = ({
+  children,
+  title,
+}) => {
   return (
-    <div className="p-4">
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div>
-          <h2 className="text-secondary text-xl">{title}</h2>
-          <p className="pt-2">{children}</p>
-          <div className="justify-end">
-            <button className="btn mt-6 bg-secondary">Done</button>
-          </div>
-        </div>
+    <StyledContainer>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledContent>{children}</StyledContent>
+      <div>
+        <StyledButton>Done</StyledButton>
       </div>
-    </div>
+    </StyledContainer>
   );
 };
