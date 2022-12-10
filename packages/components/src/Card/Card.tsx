@@ -4,13 +4,11 @@ import { Button } from '../Button';
 
 const StyledContainer = styled.div`
   padding: 1rem;
-  margin-bottom: 2rem;
   border-radius: 0.375rem;
   border-width: 1px;
   border-color: #f3f4f6;
+  border-style: solid;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 `;
 
 const StyledButton = styled(Button)`
