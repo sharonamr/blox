@@ -2,7 +2,6 @@ import { initialize } from '@ui-blox/core';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css';
 import 'prismjs/themes/prism-okaidia.css'; //Example style, you can use another
 
 initialize().then(() => {

@@ -5,7 +5,9 @@ import { highlight, languages } from 'prismjs';
 import 'prismjs/components/prism-jsx';
 import { Preview } from './Preview';
 
-const StyledEditor = styled(Editor)`
+const StyledEditor = styled(Editor).attrs((props) => ({
+    className: 'blox-code-editor',
+}))`
   margin-bottom: 1rem;
   background-color: #111827;
   color: #d1d5db;
@@ -15,7 +17,9 @@ const StyledEditor = styled(Editor)`
   border-radius: 0.5rem;
 `;
 
-const StyledCodePreview = styled.div`
+const StyledCodePreview = styled.div.attrs((props) => ({
+    className: 'blox-code-preview',
+}))`
   padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;

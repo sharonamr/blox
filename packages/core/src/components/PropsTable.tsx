@@ -1,7 +1,9 @@
 import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
-const StyledTable = styled.table`
+const StyledTable = styled.table.attrs((props) => ({
+    className: 'blox-props-table',
+}))`
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;

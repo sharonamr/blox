@@ -7,7 +7,9 @@ import { DocsCode } from '@ui-blox/core';
 import styled from "styled-components";
 {{/if}}
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.div.attrs((props) => ({
+className: 'blox-markdown',
+}))`
     h1 {
         padding-top: 1rem;
         padding-bottom: 1rem;

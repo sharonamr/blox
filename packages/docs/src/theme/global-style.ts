@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { bloxStylesOverrides } from "../blox-styles-overrides";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  
+  ${bloxStylesOverrides}
 `;
 
 export default GlobalStyle;
