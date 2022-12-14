@@ -2,6 +2,7 @@ import React, { PropsWithChildren, useCallback, useState, useEffect } from "reac
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as reactLib from 'react';
 import { transpile } from "../utils/transpiler";
+import { Button } from "./Button";
 
 const evalCode = (code: string, scope: Record<string, any>) => {
   const scopeKeys = Object.keys(scope);
@@ -21,7 +22,7 @@ const ErrorFallback: React.FC<FallbackProps> = ({ error, resetErrorBoundary }) =
   return (
     <div role="alert">
       <ErrorMessage>{error.message}</ErrorMessage>
-      <button className='btn' onClick={resetErrorBoundary}>Try again</button>
+      <Button onClick={resetErrorBoundary}>Try again</Button>
     </div>
   )
 }

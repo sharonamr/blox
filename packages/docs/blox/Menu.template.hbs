@@ -1,13 +1,20 @@
 import { NavLink } from "react-router-dom";
+import { MenuButton } from 'blox-example-components'
+import styled from "styled-components";
+
+const StyledMenuButton = styled(MenuButton)`
+    margin-top: 0.25rem;
+`;
 
 export const Menu = ({className}) => (
+
 <div className={className}>
   {{#each components}}
-  <div className='blox-menu-btn'>
+  <StyledMenuButton>
     <NavLink to="/{{this}}">
       {{this}}
     </NavLink>
-  </div>
+  </StyledMenuButton>
   {{/each}}
 </div>
 );
