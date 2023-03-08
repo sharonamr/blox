@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 @layer components {
-  /* Docs styling */
+   /* Docs styling */
+  .blox-code-container {
+    @apply relative;
+  }
   .blox-code-editor {
     @apply rounded-lg mb-4 font-mono text-sm bg-gray-900 text-gray-300;
   }
   .blox-code-preview {
     @apply rounded-lg shadow-md border-gray-100 border p-4 mb-8;
+  }
+  .blox-code-copy {
+    @apply rounded-md text-xs bg-white text-gray-600 p-1 px-3 active:bg-white hover:bg-pink-600 hover:text-white transition-all absolute right-1 bottom-1;
   }
   .blox-github-btn {
     @apply bg-white border-0 p-2 rounded-full hover:bg-gray-200 hover:scale-105 transition-all;
