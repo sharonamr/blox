@@ -11,13 +11,16 @@ export const DocsCode: React.FC<PropsWithChildren<{ code: string, dependencies: 
   }, [defaultCode]);
   return (
     <>
-      <Editor
-        value={code}
-        onValueChange={code => setCode(code)}
-        highlight={code => highlight(code, languages.jsx, 'jsx')}
-        padding={10}
-        className="blox-code-editor"
-      />
+      <div className="blox-code-container">
+        <Editor
+            value={code}
+            onValueChange={code => setCode(code)}
+            highlight={code => highlight(code, languages.jsx, 'jsx')}
+            padding={10}
+            className="blox-code-editor"
+        />
+        <button className="blox-code-copy" onClick={() => navigator.clipboard.writeText(code)}>Copy Code</button>
+      </div>
       <div className="blox-code-preview">
         <Preview code={code} dependencies={dependencies}>docs code: {code}</Preview>
       </div>
