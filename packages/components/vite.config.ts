@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/index.ts',
-      name: 'components',
+      name: 'components'
       fileName: 'index'
     },
     rollupOptions: {
